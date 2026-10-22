@@ -1,0 +1,22 @@
+[
+  {
+    "id": "u-admin",
+    "name": "TableBook Admin",
+    "username": "admin",
+    "email": "admin@tablebook.local",
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "ADMIN",
+    "phone": "",
+    "active": true
+  },
+  {
+    "id": "u-demo",
+    "name": "Demo User",
+    "username": "user",
+    "email": "user@tablebook.local",
+    "passwordHash": "e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446",
+    "role": "USER",
+    "phone": "9876543210",
+    "active": true
+  }
+]

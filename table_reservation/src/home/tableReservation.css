@@ -1,0 +1,329 @@
+
+/* =========================
+   Reservation Page
+========================= */
+
+.reservation-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  margin-top:0px;
+  padding-top:100px;
+}
+
+.reservation-page h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.reservation-subtitle {
+  text-align: center;
+  color: #777;
+}
+
+
+/* =========================
+   Legend
+========================= */
+
+.table-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  margin: 30px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+}
+
+.legend-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+
+/* Available */
+
+.legend-box.available {
+  background-color: #2ecc71;
+}
+
+
+/* Selected */
+
+.legend-box.selected {
+  background-color: #f1c40f;
+}
+
+
+/* Booked */
+
+.legend-box.booked {
+  background-color: #e74c3c;
+}
+
+
+/* Unavailable */
+
+.legend-box.unavailable {
+  background-color: #95a5a6;
+}
+
+
+/* =========================
+   Restaurant Layout
+========================= */
+
+.restaurant {
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  background-color: #fafafa;
+
+  border: 2px solid #ddd;
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+
+/* Restaurant label */
+
+.restaurant-label {
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #aaa;
+}
+
+
+/* Entrance */
+
+.entrance {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ddd;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* =========================
+   Tables
+========================= */
+
+.table {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  border: 4px solid transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  cursor: pointer;
+}
+
+
+/* Available */
+
+.table.available {
+  background-color: #d5f5e3;
+  border-color: #2ecc71;
+  color: #1e8449;
+}
+
+
+/* Booked */
+
+.table.booked {
+  background-color: #fadbd8;
+  border-color: #e74c3c;
+  color: #922b21;
+
+  cursor: not-allowed;
+}
+
+
+/* Unavailable */
+
+.table.unavailable {
+  background-color: #ecf0f1;
+  border-color: #95a5a6;
+  color: #566573;
+
+  cursor: not-allowed;
+}
+
+
+/* Selected */
+
+.table.selected {
+  background-color: #f9e79f;
+  border-color: #f1c40f;
+
+  transform: translate(-50%, -50%) scale(1.1);
+
+  box-shadow: 0 0 0 5px rgba(241, 196, 15, 0.2);
+}
+
+
+/* Hover */
+
+.table.available:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* =========================
+   Table Text
+========================= */
+
+.table-number {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.table-seats {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+
+/* =========================
+   Reservation Summary
+========================= */
+
+.reservation-summary {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  background-color: white;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reservation-summary div {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-summary span {
+  color: #777;
+  font-size: 13px;
+}
+
+.reservation-summary strong {
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+
+/* =========================
+   Reserve Button
+========================= */
+
+.reserve-btn {
+  padding: 12px 25px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #d35400;
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  background-color: #b94600;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .restaurant {
+    height: 500px;
+  }
+
+  .table {
+    width: 65px;
+    height: 65px;
+  }
+
+  .table-legend {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .reservation-summary {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .reserve-btn {
+    width: 100%;
+  }
+}
